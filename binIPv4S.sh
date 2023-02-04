@@ -41,6 +41,7 @@ usage()
 # Define functions END
 
 # Test user's argument START
+# Slackware's ash does NOT understand globs like [[:alpha:]], only * ? [a-zA-Z0-9]
 [ -z "$1" ] ||
 [ "${1%.*}" = "$1" ] ||
 [ "${1#*[[:alpha:]]}" != "$1" ] && usage
